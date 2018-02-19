@@ -1,0 +1,154 @@
+1. What is a Servlet?
+A servlet is a Java technology and it is managed by a container called servlet engine. It generates dynamic content and interacts with client through Request and Response.
+2. Why servlet is mostly used?
+Servlets are mostly used because they are platform-independent Java classes and are compiled to platform-neutral byte code. Java byte code can be loaded dynamically into and run by java enabled web server.
+3. What is called servlet container?
+A servlet container is a part of Web server that provides network services depends on request and response are sent, MIME based requests and responses. It contains and manages servlets through their life cycle.
+4. What is a filter?
+A filter is nothing but a piece of code which can be reusable that will be transforming the content of HTTP requests, response and header information.
+5. How can we refresh automatically when new data has entered the database?
+Refresh in Client side and Server Push can be performed to refresh automatically when new data is entered into the database.
+Servlet
+Servlet
+6. What is called a session?
+A session is an object which is used by a servlet and it is used to track user interaction with a web application across multiple HTTP requests.
+7. What is servlet mapping?
+Servlet Mapping is an association mapping between servlet and a URL pattern. This is used to map servlets with the requests.
+8. What is a servlet context?
+Servlet context contains servlet view of Web application in which servlet will be running. By using the context,
+Log events
+Obtain URL references to resources
+Set and Store attributes
+9. Which interface should be implemented by all servlets?
+Servlet interface should be implemented by all servlets.
+10. What is life cycle of Servlet?
+Following is life cycle of Servlet:
+Loaded
+Initialized
+Destroy
+Unloaded
+11. What is the difference between Servlet Request and Servlet Context when calling a Request Dispatcher?
+Relative URL can be called when Servlet Request is used and Relative URL is not used when using Servlet Context.
+12. What are the features added in Servlet 2.5?
+Following are the features added in Servlet 2.5:
+Dependency on J2SE 5.0
+Support for annotations
+Loading the class
+Several web.xml
+Removed restrictions
+Edge case clarifications
+13. When servlet is loaded?
+A servlet can be loaded when:
+
+First request is made
+Auto loading and Server starts up
+There is a single instance that answers all requests concurrently which  saves memory
+Administrator manually loads.
+14. When Servlet is unloaded?
+
+A servlet is unloaded when:
+
+Server shuts down
+Administrator manually unloads
+15. What are the supporting protocol by HttpServlet ?
+HttpServlet supports only HTTP and HTTPS protocol.
+16. What is called Session Tracking?
+Session tracking is used to maintain a state on the series of requests from the same user for a given period of time.
+17. Why session tracking is needed?
+Every HTTP request needs to be captured by HTTP protocol and for that, state is captured. Tracking of state is called session tracking.
+18. What are the types of Session Tracking ?
+There are following types of session tracking:
+
+URL rewriting
+Hidden Form Fields
+Cookies
+Secure Socket Layer (SSL)
+19. What are the advantages of cookies?
+Cookies are used to store long term information that can be maintained without server interaction. Small and Medium size data are kept in a queue.
+20. What is URL rewriting?
+URL rewriting is one of the methods of session tracking in which additional data is appended at the end of each URL. This additional data identifies the session.
+21. What is servlet lazy loading?
+A servlet container which does not initialize at the start up, this is known as servlet lazy loading.
+22. What is Servlet Chaining?
+Chaining is one of the methods where out of one servlet is given to the second servlet. This chaining can happen for any number of servlets.
+23. What are the important functions of filters?
+Following are the important functions of Filters:
+Security check
+Modifying the request or response
+Data compression
+Logging and auditing
+Response compression
+24. What are the functions of Servlet container?
+Following are the functions of the Servlet container:
+Lifecycle management
+Communication support
+Multithreading support
+Declarative security
+JSP support
+25. What is the difference between JSP and Servlets ?
+JSP supports HTTP protocol which mainly used for presentation. But a servlet can support any protocol like HTTP, FTP, SMTP etc.
+26. What are all the ways for session tracking?
+Following are the ways for session tracking:
+
+Cookies
+URL rewriting
+HttpSession
+Hidden form fields
+27. What is called Scriptlet?
+A scriptlet contains any language statements, variables, expressions that can be valid in the page scripting language. Scriptlet is a part of generated servlet service method.
+28. What is the difference between Server and Container?
+A server can provide service to the client and it contains one or more containers such as EJBs, Servlet, JSP containers. Containers hold set of objects.
+29. Can we refresh servlet in client and server side automatically?
+On the client side, Meta http is used for refresh and server push is used for server side refresh.
+30. What is the difference between ServletConfig and ServletContext?
+ServletConfig provides information about configuration of a servlet which is defined inside the web.xml file and it is a specific object for each servlet.
+ServletContext is an application specific object and it is shared by all servlet. It belongs to one application in one JVM.
+31. What is Pure Servlet?
+Pure servlet is servlet which is used to create java objects that can be implemented from javax.servlet.Servlet interface.
+32. What is the difference between Servlets and applets?
+Servlets are used for server side config and it keeps on server. But, Applets are used for client side coding and it runs on client browsers.
+33. What is Generic Servlet class?
+Generic servlet is the super class of all servlets. This class is extended by all other classes and it is protocol independent.
+34. What is Java Servlet?
+Java servlet is used to provide secure access to the web based date. This can extend functionality present in the web servers. As it is platform and server independent, it is used for many purposes.
+35. What is String Tokenizer?
+A String Tokenizer is used to break the string into tokens and the token value is passed as an argument in the constructor.
+36. What is HttpServlet and how it is different from GenericServlet?
+HttpServlet extends from GenericServlet and inherits the properties of Genericservlet. HttpServlet defines a HTTP protocol servlet while GenericServlet defines a generic, protocol-independent servlet.
+37. How to get the current HttpSession object?
+GetSession method is used to get the current HttpSession object on HttpservletRequest.
+38. What do you mean by Default initialization in Java Servlet?
+This is one of the servlet initialization and it is initialized when it is called for the first time.
+39. What is Servlet Invoker?
+Servlet Invoker allows web application to dynamically register new servlet definitions with the servlet tag in the /WEB-INF/web.xml.
+40. What is called Servlet mapping?
+Servlet mapping maps URL patterns with the servlets. If there is a request from the client, servlet container decides on which application it needs to map.
+41. What are all the protocols supported by HttpServlet?
+HttpServlet supports HTTP and HTTPS protocol.
+42. Which exception is thrown if servlet is not initialized properly?
+Servlet Exception or Unavailable Exception is thrown if servlet is not initialized properly.
+43. Who is responsible for writing a constructor?
+Container is responsible for writing constructor without arguments in servlet.
+44. What are all the advantages of Servlet over CGI? 
+Following are the advantages of Servlet over CGI:
+
+Cannot be run in an individual process.
+Servlet stays in the memory while requests. For every CGI request, you must load and start a CGI program.
+web.xml conveniences
+45. What are the different mode that servlets can be used?
+Following are the modes that servlets can be used:
+
+Filter chains can be used to collect servlets together
+Support HTTP protocol
+Used for CGI based applications
+Dynamic generation of servlets
+46. What are the uses of servlets?
+Servlets are used to process and store data submitted by HTML form, dynamic content, handle multiple request concurrently and manage state information on top of stateless HTTP.
+47. Whether we can get deadlock situation in Servlets?
+Yes, it can be achieved by writing doGet method in doPost method and writing doPost method in doGet method.
+48. What is the default HTTP method in the servlet?
+Default method is GET method for HTTPservlet.
+49. Whether thread can be used in Servlets?
+Yes, Single thread can be used in servlets.
+50. What exception should be thrown when servlet is not properly initialized?
+Servlet exception or an Unavailable exception is thrown when it is not properly initialized.
